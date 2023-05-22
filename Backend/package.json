@@ -1,0 +1,27 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "branch": "main",
+  "description": "",
+  "main": "src/app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "Omar Mejia Tinajero",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^1.4.0",
+    "body-parser": "^1.20.2",
+    "config": "^3.3.9",
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.3",
+    "express": "~4.17.1",
+    "express-session": "^1.17.3",
+    "faker": "~5.3.1",
+    "joi": "^17.9.2",
+    "lodash": "^4.17.21",
+    "mercadopago": "^1.5.16",
+    "mongoose": "~5.12.12"
+  }
+}
