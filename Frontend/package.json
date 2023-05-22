@@ -24,7 +24,7 @@
   },
   "scripts": {
     "stayrt": "react-scripts start",
-    "build": "react-scripts docs",
+    "build": "react-scripts ../docs",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
