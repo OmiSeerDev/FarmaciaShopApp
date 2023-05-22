@@ -42,10 +42,9 @@ const Price = styled.div`
   margin: 10px 0;
 `;
 
-const SquareButton = styled.button<{
+const AddButton = styled.button<{
   background: string;
   backgroundHover: string;
-  color: string;
 }>`
   color: #000000;
   width: 160px;
@@ -62,16 +61,6 @@ const SquareButton = styled.button<{
   }
 `;
 
-const Counter = styled.div`
-  width: 40px;
-  height: 40px;
-  display: flex;
-  background-color: #ffffff;
-  border: 1px solid #000000;
-  justify-content: center;
-  align-items: center;
-`;
-
 type ProductProps = {
   productName: string;
   imgString: string;
@@ -84,8 +73,6 @@ const Product = ({
   imgString,
   price,
 }: ProductProps): JSX.Element => {
-  let [counter, setCount] = React.useState<number>(0);
-  let [cart, createdCart] = React.useState<boolean>(false);
 
   type CartResponseProps = {
     cart?: Cart;
@@ -117,19 +104,19 @@ const Product = ({
     }
   };
 
+  // @ts-ignore
+  // @ts-ignore
   return (
     <Frame>
       <Name>{productName}</Name>
       <Image src={imgString} />
       <Price>${price}</Price>
       <CountingContainer>
-        <SquareButton
-          background={"#acff97"}
-          backgroundHover={"#34d34d"}
-          onClick={addToCartAsync}
-        >
+          <AddButton
+              background={"#acff97"}
+          backgroundHover={"#34d34d"}>
           Añadir al Carrito
-        </SquareButton>
+          </AddButton>
       </CountingContainer>
     </Frame>
   );
